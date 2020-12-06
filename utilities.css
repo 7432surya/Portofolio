@@ -41,3 +41,12 @@
   color: #161616;
   background-color: #3dcfd3;
 }
+@media screen (max-width: 600px){
+  body { 
+    width: 100%;
+    position: static;
+  }
+  body h1{
+    font-size:5rem;
+  }
+  }
