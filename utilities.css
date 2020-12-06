@@ -43,7 +43,7 @@
 }
 @media screen (max-width: 600px){
   body { 
-    width: 100%;
+    width: 600px;
     position: static;
   }
   body h1{
