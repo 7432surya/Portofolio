@@ -1,0 +1,479 @@
+@import 'utilities.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing:antialiased;
+  scroll-behavior: smooth;
+}
+body{
+  font-family: 'Poppins', sans-serif;
+}
+/* header */
+header {
+  background-color: #161616;
+  height: 800px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 75% 85%, 0 100%)
+}
+.container{
+  max-width: 1152px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+header nav .left a{
+  color: #ffffff;
+  text-decoration: none;
+  margin-right: 2rem;
+  text-transform: uppercase;
+  transition: all .3s ease;
+}
+header nav .left a:hover{
+  color: #3dcfd3;
+}
+header nav{
+  padding: 2rem 0;
+}
+header nav  .branding{
+  margin-right: 3rem;
+  color: #ffffff;
+}
+.content .title{
+  color: #ffffff;
+  padding-left: 5rem;
+  margin-left: 12rem;
+  margin-top: 1rem;
+}
+header span{
+  color: #3dcfd3;
+}
+/* Animation */
+.anime{
+   margin-top: 6rem;
+   margin-left: 0;
+   transition: all ease-in-out;
+}
+.anime .cls-1{
+  stroke-dasharray: 500px;
+  stroke-dashoffset: 500px;
+  animation: line-anime 10s;
+  animation-iteration-count: infinite;
+  opacity: 25%;
+}
+.anime tspan:nth-child(1) {
+  animation: line-anime 10s;
+  animation-iteration-count: infinite;
+}
+.anime tspan:nth-child(2) {
+  animation: line-anime 10s;
+  animation-iteration-count: infinite;
+}
+.anime tspan:nth-child(3) {
+  animation: line-anime 10s;
+  animation-iteration-count: infinite;
+}
+.anime tspan:nth-child(4) {
+  animation: line-anime 10s;
+  animation-iteration-count: infinite;
+}
+.anime tspan:nth-child(5) {
+  animation: line-anime 10s;
+  animation-iteration-count: infinite;
+}
+.anime tspan:nth-child(6) {
+  animation: line-anime 10s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes line-anime {
+  0{
+    stroke-dashoffset: 500px;
+    opacity: 0;
+    animation: ease forwards;
+  }
+  10%{
+    stroke-dashoffset: 375px;
+    opacity: 25%;
+    animation: ease forwards;
+  }
+  20%{
+    stroke-dashoffset: 250px;
+    opacity: 50%;
+    animation: ease forwards;
+  }
+  40%{
+    stroke-dashoffset: 125px;
+    opacity: 75%;
+    animation: ease forwards;
+  }
+  50%{
+    stroke-dashoffset: 0px;
+    opacity: 100%;
+    animation: ease forwards;
+  }
+  60%{
+    stroke-dashoffset: 0px;
+    opacity: 100%;
+    animation: ease backwards;
+  }
+
+  70%{
+    stroke-dashoffset: 125px;
+    opacity: 75%;
+    animation: ease backwards;
+  }
+  80%{
+    stroke-dashoffset: 250px;
+    opacity: 50%;
+    animation: ease backwards;
+  }
+  90%{
+    stroke-dashoffset: 375px;
+    opacity: 25%;
+    animation: ease backwards;
+  }
+  100%{
+    stroke-dashoffset: 500px;
+    opacity: 0;
+    animation: ease backwards;
+  }
+}
+
+/* Main-About */
+.container-1{
+  padding-top: 10rem;
+}
+.container-1 h1{
+  margin-left: 45%;
+}
+.container-1 p{
+  margin-top: 6rem;
+  text-align: left;
+  margin-left: 50%;
+  padding: 2rem;
+}
+
+
+
+/* Main-Skills */
+.skills{
+  display: grid;
+  place-items: left;
+  padding: 7.5rem;
+}
+.skill-bar{
+  width: 600px;
+  background: #fff;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  padding: 15px 30px;
+  margin-left: 15%;
+}
+.skill-bar .bar{
+  margin: 20px 0;
+}
+.skill-bar .bar:first-child{
+  margin-top: 0;
+}
+.skill-bar .bar .info{
+  margin-bottom: 5px;
+}
+.skill-bar .bar .info span{
+  font-size: 17px;
+  font-weight: 500;
+  background: #f0f0f0;
+  opacity: 0;
+  animation: shadowText 0.5s 1s linear forwards;
+}
+@keyframes shadowText {
+  100%{
+    opacity: 1;
+  }
+}
+
+.skill-bar .bar .progress-line{
+  position: relative;
+  height: 10px;
+  width: 100%;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+  box-shadow: inset 0px 1px 1px rgba(0,0,0,0.05), 0px 1px rgba(255,255,255,0.8);
+}
+@keyframes animate {
+  100%{
+    transform: scaleX(1);
+  }
+}
+.bar .progress-line span{
+  height: 100%;
+  width: 80%;
+  background-color: #161616;
+  transform: scaleX(0);
+  transform-origin: left;
+  position: absolute;
+  border-radius: 10px;
+  animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+.progress-line.html span{
+  width: 100%;
+}
+.progress-line.css span{
+  width: 85%;
+}
+.progress-line.javascript span{
+  width: 65%;
+}
+.progress-line.node span{
+  width: 40%;
+}
+.progress-line.mysql span{
+  width: 25%;
+}
+.progress-line.mongodb span{
+  width: 50%;
+}
+.progress-line.ps span{
+  width: 90%;
+}
+.progress-line.ai span{
+  width: 85%;
+}
+.progress-line.id span{
+  width: 50%;
+}
+.progress-line.xd span{
+  width: 40%;
+}
+.bar .progress-line span::before{
+  position: absolute;
+  content: "";
+  right: 0;
+  top: -10px;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: #000;
+}
+.bar .progress-line span::after{
+  position: absolute;
+  content: "80%";
+  right: 0;
+  top: -28px;
+  color: #fff;
+  background: #000;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 1px 8px;
+  border-radius: 3px;
+  opacity: 0;
+  animation: shadowText2 0.5s 1.5s linear forwards;
+}
+@keyframes shadowText2 {
+  100%{
+    opacity: 1;
+  }
+}
+.progress-line.html span::after{
+  content: "100%";
+}
+.progress-line.css span::after{
+  content: "85%";
+}
+.progress-line.javascript span::after{
+  content: "65%";
+}
+.progress-line.node span::after{
+  content: "40%";
+}
+.progress-line.mysql span::after{
+  content: "25%";
+}
+.progress-line.mongodb span::after{
+  content: "50%";
+}
+.progress-line.ps span::after{
+  content: "90%";
+}
+.progress-line.ai span::after{
+  content: "85%";
+}
+.progress-line.id span::after{
+  content: "50%";
+}
+.progress-line.xd span::after{
+  content: "40%";
+}
+
+.logo-anime-1{
+  position: absolute;
+  right: 100px;
+  top: 110rem;
+}
+.logo-anime-1 div{
+  height: 100px;
+  width: 100px;
+  animation: float 6s ease-in-out infinite;
+  box-shadow: 0px, 5px, 15px, 0px rgba(0,0,0,0.6);
+  transform: translateY(0px);
+}
+.logo-anime-1 .html-5{
+position: relative;
+right: 40rem;
+}
+.logo-anime-1 .css-3{
+position: relative;
+right: 30rem;
+bottom: 100px;
+}
+.logo-anime-1 .js-1{
+position: relative;
+right: 20rem;
+bottom: 200px;
+}
+.logo-anime-1 .node-1{
+position: relative;
+right: 40rem;
+bottom: 100px;
+}
+.logo-anime-1 .sql{
+position: relative;
+right: 30rem;
+bottom: 200px;
+}
+.logo-anime-1 .mongo{
+position: relative;
+right: 20rem;
+bottom: 350px;
+}
+.logo-anime-2{
+  position: absolute;
+  right: 80px;
+  top: 137rem;
+}
+.logo-anime-2 div{
+  height: 100px;
+  width: 100px;
+  animation: float 6s ease-in-out infinite;
+  box-shadow: 0px, 5px, 15px, 0px rgba(0,0,0,0.6);
+  transform: translateY(0px);
+}
+.logo-anime-2 .ps-1{
+position: relative;
+right: 40rem;
+}
+.logo-anime-2 .ai-1{
+position: relative;
+right: 30rem;
+bottom: 100px;
+}
+.logo-anime-2 .id-1{
+position: relative;
+right: 20rem;
+bottom: 200px;
+}
+.logo-anime-2 .xd-1{
+position: relative;
+right: 40rem;
+bottom: 150px;
+}
+@keyframes float {
+  0{
+    box-shadow: 0px, 5px, 15px, 0px rgba(0,0,0,0.6);
+    transform: translateY(0px);
+  }
+  50%{
+    box-shadow: 0px, 25px, 15px, 0px rgba(0,0,0,0.2);
+    transform: translateY(-20px);
+  }
+  100%{
+    box-shadow: 0px, 5px, 15px, 0px rgba(0,0,0,0.6);
+    transform: translateY(0px);
+  }
+}
+.about-anime{
+  position: absolute;
+  top: 1120px;
+  left: 700px;
+
+}
+.service-container h1{
+  margin-left: 47%;
+  color: #ffffff;
+}
+
+.service-container{
+  width: 100%;
+  height: 300px;
+  margin-top: 10%;
+  background-color: #161616;
+  position: relative;
+}
+.service{
+  width: 250px;
+  height: 300px;
+  background-color: white;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+  position: absolute;
+  top: 150px;
+  text-align: left;
+  margin-left: 0;
+  border-radius: 25px;
+}
+.service img{
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+.service.logo{
+  left: 75px;
+}
+.service.web{
+  left: 375px;
+}
+.service.vector{
+  left: 675px;
+}
+.service.mock-up{
+  left: 975px;
+}
+.service.illustration{
+  left: 1275px;
+}
+.service.coming-soon{
+  left: 1575px;
+}
+.service h1{
+  color: #161616;
+  font-size: 1.5rem;
+  margin-left: 10px;
+}
+.service p{
+  color: #161616;
+  font-size: 0.8rem;
+  margin-left: 10px;
+}
+.service button{
+  background-color: #3dcfd3;
+  position: absolute;
+  bottom: 5%;
+  left: 25%;
+  border: 2px solid;
+  width: 100px;
+  color: black;
+}
+.contact{
+  text-align: center;
+  padding-top: 400px;
+  width: 100%;
+  height: 100px;
+}
+footer {
+  margin-top: 25%;
+  background-color: #161616;
+  height: 100px;
+  width: 100%;
+}
