@@ -48,6 +48,7 @@
   }
   header {
     width: 600px;
+    height: 100vh;
   }
   main {
     width: 600px;
